@@ -1,0 +1,35 @@
+window-colorspace = "display-p3"
+window-save-state = always
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+shell-integration = zsh
+macos-auto-secure-input = true
+
+font-family = "AurulentSansM Nerd Font Regular"
+font-feature = -liga
+font-feature = -calt
+font-feature = -ss20
+font-size = 12
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+# Keybinds
+keybind = cmd+s>x=close_surface 
+
+# Theme
+foreground = cdd6f4
+background = 181825
+background-opacity = 0.95
+background-blur-radius = 20
+
+cursor-color = c7c7c7
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+macos-titlebar-style = transparent
+macos-titlebar-style = hidden
+window-padding-x = 2
+window-padding-balance = true

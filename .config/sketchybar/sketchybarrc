@@ -1,0 +1,79 @@
+#!/bin/bash
+source "$CONFIG_DIR/colors.sh"
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+sketchybar --bar height=37        \
+                 blur_radius=30   \
+                 position=top     \
+                 sticky=off       \
+                 padding_left=7  \
+                 padding_right=7 \
+                 color=$BAR_COLOR
+
+
+sketchybar --default icon.font="SF Pro:Semibold:13.0"  \
+                     icon.color=$WHITE                 \
+                     label.font="SF Pro:Semibold:13.0" \
+                     label.color=$WHITE                \
+                     background.color=$ITEM_BG_COLOR       \
+                     background.corner_radius=7            \
+                     background.height=24                  \
+                     padding_left=5                        \
+                     padding_right=5                       \
+                     label.padding_left=4                  \
+                     label.padding_right=10                \
+                     icon.padding_left=10                  \
+                     icon.padding_right=4
+
+sketchybar --add event aerospace_workspace_change \
+           --add event window_focus
+
+# ~~Left~~
+
+# Spaces
+SPACE_ICONS=("1" "2" "3" "4")
+
+for sid in $(aerospace list-workspaces --all); do
+    icon_index=$((sid - 1))
+    sketchybar --add item space.$sid left \
+        --subscribe space.$sid aerospace_workspace_change window_focus \
+        --set space.$sid \
+        background.color=$ITEM_BG_COLOR \
+        background.corner_radius=5 \
+        background.height=20 \
+        icon.color=$WHITE \
+        icon.padding_left=10 \
+        icon.padding_right=10 \
+        icon="${SPACE_ICONS[$icon_index]}" \
+        label.drawing=off \
+        click_script="aerospace workspace $sid" \
+        script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+done
+
+# Front App
+sketchybar --add item front_app left \
+           --set front_app      label.color=$WHITE \
+                                script="$PLUGIN_DIR/front_app.sh" \
+                                icon.drawing=off\
+                                label.padding_left=10 \
+           --subscribe front_app front_app_switched
+# ~~Right~~
+
+# Clock
+sketchybar --add item clock right \
+           --set clock update_freq=10 icon=􀐫  script="$PLUGIN_DIR/clock.sh" \
+        
+# Calendar
+sketchybar --add item calendar right \
+           --set calendar update_freq=10 icon=􀧞  script="$PLUGIN_DIR/calendar.sh" \
+
+# Battery
+sketchybar --add item battery right \
+           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
+
+# ~~Sketchy Stuff~~
+sketchybar --hotload on
+sketchybar --update
