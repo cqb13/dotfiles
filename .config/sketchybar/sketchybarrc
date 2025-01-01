@@ -63,7 +63,8 @@ sketchybar --add item front_app left \
 
 # Clock
 sketchybar --add item clock right \
-           --set clock update_freq=10 icon=􀐫  script="$PLUGIN_DIR/clock.sh" \
+           --set clock update_freq=1 icon=􀐫  script="$PLUGIN_DIR/clock.sh" \
+           --subscribe clock system_woke
         
 # Calendar
 sketchybar --add item calendar right \
