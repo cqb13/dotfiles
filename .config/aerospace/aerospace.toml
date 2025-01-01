@@ -89,7 +89,7 @@ outer.right =      10
 # end tell'
 # '''
 
-alt-ctrl-shift-f = 'fullscreen'
+alt-shift-f = 'fullscreen'
 alt-ctrl-f = 'layout floating tiling'
 alt-ctrl-t = 'layout tiling'
 alt-ctrl-l = 'layout floating'
