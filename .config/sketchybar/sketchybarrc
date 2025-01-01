@@ -67,7 +67,8 @@ sketchybar --add item clock right \
         
 # Calendar
 sketchybar --add item calendar right \
-           --set calendar update_freq=10 icon=􀧞  script="$PLUGIN_DIR/calendar.sh" \
+           --set calendar icon=􀧞  script="$PLUGIN_DIR/calendar.sh" \
+           --subscribe calendar system_woke
 
 # Battery
 sketchybar --add item battery right \
