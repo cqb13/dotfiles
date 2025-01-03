@@ -5,7 +5,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
 sketchybar --bar height=37        \
-                 blur_radius=30   \
+                 blur_radius=25   \
                  position=top     \
                  sticky=off       \
                  padding_left=7  \
