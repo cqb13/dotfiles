@@ -1,5 +1,5 @@
 window-colorspace = "display-p3"
-window-save-state = always
+#window-save-state = always
 clipboard-read = allow
 clipboard-write = allow
 clipboard-trim-trailing-spaces = true
