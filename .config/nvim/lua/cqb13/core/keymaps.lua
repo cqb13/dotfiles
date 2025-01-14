@@ -19,3 +19,9 @@ end
 
 keymap.set("n", "<C-;>", OpenTerminal, { desc = "Open the terminal to the current directory in a vertical split" })
 keymap.set("t", "<C-;>", "<cmd>close<CR>", { desc = "Close current terminal window" })
+
+function ToggleSpellingSuggestions()
+	vim.o.spell = not vim.o.spell
+end
+
+keymap.set("n", "<leader>xs", ToggleSpellingSuggestions, { desc = "Toggle spelling suggestions" })
