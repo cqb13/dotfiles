@@ -41,7 +41,6 @@ run = 'layout floating'
 if.app-name-regex-substring = 'Notes'
 run = 'layout floating'
 
-
 [[on-window-detected]]
 if.app-name-regex-substring = 'Activity Monitor'
 run = 'layout floating'
@@ -146,6 +145,7 @@ alt-shift-enter = 'mode apps'
 alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-c='exec-and-forget open -na "Google Chrome" --args --new-window'
 alt-m = 'exec-and-forget open -a /System/Applications/Messages.app'
+alt-f = 'exec-and-forget open -a Finder'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
