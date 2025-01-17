@@ -22,7 +22,7 @@ local boiler = fmt(
     </head>
     <body>
       <footer>
-        <a href="" target="_blank">{} | © 2024</a>
+        <a href="" target="_blank">{} | © 2025</a>
         <a href="https://github.com/cqb13" target="_blank"
           >Created by Maksim Straus</a
         >
