@@ -48,3 +48,5 @@ alias c='clear'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+PATH=~/.console-ninja/.bin:$PATH
