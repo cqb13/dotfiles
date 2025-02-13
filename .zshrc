@@ -45,6 +45,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias neofetch='fastfetch'
 
 # Shell integrations
 eval "$(fzf --zsh)"
