@@ -28,8 +28,8 @@ return {
 				"cssls",
 				"tailwindcss",
 				"lua_ls",
-				"pyright",
 				"rust_analyzer",
+				"pylsp",
 				"jdtls",
 				"gopls",
 				"clangd",
@@ -43,7 +43,6 @@ return {
 				"stylua",
 				"isort",
 				"black",
-				"pylint",
 				"eslint_d",
 			},
 		})
