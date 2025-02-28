@@ -25,3 +25,17 @@ function ToggleSpellingSuggestions()
 end
 
 keymap.set("n", "<leader>xs", ToggleSpellingSuggestions, { desc = "Toggle spelling suggestions" })
+
+local hex_mode = false
+
+function ToggleHexEdit()
+	if hex_mode then
+		vim.cmd("%!xxd -r")
+	else
+		vim.cmd("%!xxd")
+		vim.cmd("set ft=xxd")
+	end
+	hex_mode = not hex_mode
+end
+
+vim.keymap.set("n", "<leader>he", ToggleHexEdit, { desc = "Toggle hex edit mode" })
