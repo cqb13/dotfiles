@@ -14,7 +14,10 @@ opt.smarttab = true
 opt.expandtab = true -- expand tab to space
 opt.autoindent = true -- copy indent from current line when starting a new one
 
-opt.wrap = false -- no line wrap
+opt.wrap = true
+opt.linebreak = true
+opt.showbreak = "↪ "
+opt.colorcolumn = "120"
 
 -- search settings
 opt.ignorecase = true
