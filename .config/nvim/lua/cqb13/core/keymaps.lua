@@ -38,4 +38,6 @@ function ToggleHexEdit()
 	hex_mode = not hex_mode
 end
 
+--TODO: create a function that toggles opt.cmdheight between 0 and default value
+
 vim.keymap.set("n", "<leader>he", ToggleHexEdit, { desc = "Toggle hex edit mode" })
