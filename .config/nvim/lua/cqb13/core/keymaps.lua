@@ -40,7 +40,7 @@ end
 
 vim.keymap.set("n", "<leader>he", ToggleHexEdit, { desc = "Toggle hex edit mode" })
 
-local collapsed = false
+local collapsed = true
 
 function ToggleBottomBar()
 	if collapsed then
