@@ -12,14 +12,6 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current window" 
 keymap.set("n", "<leader>s.", "<cmd>vertical resize -10<CR>", { desc = "Decrease width" })
 keymap.set("n", "<leader>s,", "<cmd>vertical resize +10<CR>", { desc = "Increase width" })
 
-function OpenTerminal()
-	vim.cmd("vsplit term://zsh")
-	vim.cmd("startinsert")
-end
-
-keymap.set("n", "<C-;>", OpenTerminal, { desc = "Open the terminal to the current directory in a vertical split" })
-keymap.set("t", "<C-;>", "<cmd>close<CR>", { desc = "Close current terminal window" })
-
 function ToggleSpellingSuggestions()
 	vim.o.spell = not vim.o.spell
 end
