@@ -2,8 +2,6 @@ vim.cmd("let g:netrw_liststyle = 3")
 
 local opt = vim.opt
 
---opt.cmdheight = 0
-
 opt.relativenumber = true
 opt.number = true
 

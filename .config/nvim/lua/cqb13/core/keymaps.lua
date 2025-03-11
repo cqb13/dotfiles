@@ -38,6 +38,17 @@ function ToggleHexEdit()
 	hex_mode = not hex_mode
 end
 
---TODO: create a function that toggles opt.cmdheight between 0 and default value
-
 vim.keymap.set("n", "<leader>he", ToggleHexEdit, { desc = "Toggle hex edit mode" })
+
+local collapsed = false
+
+function ToggleBottomBar()
+	if collapsed then
+		vim.opt.cmdheight = 1
+	else
+		vim.opt.cmdheight = 0
+	end
+	collapsed = not collapsed
+end
+
+vim.keymap.set("n", "<leader>sb", ToggleBottomBar, { desc = "Toggle bottom bar" })
