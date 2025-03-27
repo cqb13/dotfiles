@@ -16,6 +16,7 @@ opt.autoindent = true -- copy indent from current line when starting a new one
 
 opt.wrap = true
 opt.linebreak = true
+opt.breakindent = true
 opt.showbreak = "↪ "
 
 -- search settings
