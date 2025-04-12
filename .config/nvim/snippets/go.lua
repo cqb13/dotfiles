@@ -1,7 +1,5 @@
 local ls = require("luasnip")
 local s = ls.s
-local i = ls.i
-local t = ls.t
 
 local fmt = require("luasnip.extras.fmt").fmt
 
