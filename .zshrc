@@ -43,6 +43,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls='ls --color'
+alias hexdump='hexdump -C'
 alias vim='nvim'
 alias c='clear'
 alias neofetch='fastfetch'
