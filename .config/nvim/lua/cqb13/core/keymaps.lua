@@ -51,10 +51,14 @@ local hex_mode = false
 
 local function ToggleHexEdit()
 	if hex_mode then
+		vim.opt.binary = true
+		vim.opt.eol = false
 		vim.cmd("%!xxd -r")
 		vim.opt.filetype = "text"
 		vim.notify("Hex Edit: OFF", vim.log.levels.INFO)
 	else
+		vim.opt.binary = true
+		vim.opt.eol = false
 		vim.cmd("%!xxd")
 		vim.opt.filetype = "xxd"
 		vim.notify("Hex Edit: ON", vim.log.levels.INFO)
