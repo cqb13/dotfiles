@@ -52,3 +52,5 @@ alias neofetch='fastfetch'
 eval "$(fzf --zsh)"
 
 
+
+PATH=~/.console-ninja/.bin:$PATH
