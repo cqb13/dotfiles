@@ -117,6 +117,21 @@ return {
 					},
 				})
 			end,
+			["pylsp"] = function()
+				lspconfig["pylsp"].setup({
+					capabilities = capabilities,
+					settings = {
+						pylsp = {
+							plugins = {
+								pycodestyle = {
+									ignore = { "W391" },
+									maxLineLength = 180,
+								},
+							},
+						},
+					},
+				})
+			end,
 		})
 		vim.diagnostic.config({
 			float = {

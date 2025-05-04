@@ -35,6 +35,7 @@ return {
 				"clangd",
 				"emmet_language_server",
 			},
+			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
