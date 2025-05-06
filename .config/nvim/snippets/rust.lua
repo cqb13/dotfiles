@@ -20,7 +20,21 @@ local err = fmt(
   impl std::error::Error for Error {{}}  ]],
 	{}
 )
+
+local args = fmt(
+	[[
+  use std::env;
+  
+  fn main() {{
+      let args: Vec<String> = env::args().collect();
+  }}
+  ]],
+	{}
+)
+
 local err_snippet = s("!err-enum", err)
+local args_snippet = s("!args-setup", args)
 table.insert(snippets, err_snippet)
+table.insert(snippets, args_snippet)
 
 return snippets, autosnippets
