@@ -53,4 +53,3 @@ eval "$(fzf --zsh)"
 
 
 
-PATH=~/.console-ninja/.bin:$PATH

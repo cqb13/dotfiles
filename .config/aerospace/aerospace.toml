@@ -53,6 +53,9 @@ run = 'layout floating'
 if.app-name-regex-substring = 'messages'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-name-regex-substring = 'Godot'
+run = 'layout floating'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
