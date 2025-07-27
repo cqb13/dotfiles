@@ -18,6 +18,12 @@ zinit light zsh-users/zsh-autosuggestions
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
+
+export EDITOR=nvim
+
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
 fi
@@ -50,6 +56,4 @@ alias neofetch='fastfetch'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-
-
 
