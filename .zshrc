@@ -29,7 +29,7 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 fi
 
 # Keybinds
-bindkey '^I' autosuggest-accept
+bindkey '^F' autosuggest-accept
 
 # Histroy
 HISTSIZE=5000
