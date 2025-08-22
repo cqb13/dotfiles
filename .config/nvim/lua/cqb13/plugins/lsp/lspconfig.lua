@@ -133,6 +133,7 @@ return {
 				})
 			end,
 		})
+
 		vim.diagnostic.config({
 			float = {
 				focusable = false,

@@ -28,10 +28,8 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
--- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line, or insert mode start position
 
--- clipboard
 opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows

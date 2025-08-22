@@ -6,7 +6,5 @@ return {
 		vim.o.timeoutlen = 500
 	end,
 
-	opts = {
-		-- empty for default config
-	},
+	opts = {},
 }

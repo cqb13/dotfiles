@@ -1,5 +1,5 @@
 return {
-	"L3MON4D3/LuaSnip", -- snippet completions
+	"L3MON4D3/LuaSnip",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = { "rafamadriz/friendly-snippets" },
 	build = "make install_jsregexp",
