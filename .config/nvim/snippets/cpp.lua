@@ -17,7 +17,16 @@ local header = fmt(
 	{ i(1), rep(1) }
 )
 
+local print = fmt(
+	[[
+  std::cout << {} << '\n';
+  ]],
+	{ i(1) }
+)
+
 local boiler_snippet = s("!header", header)
+local print_snippet = s("print", print)
 table.insert(snippets, boiler_snippet)
+table.insert(snippets, print_snippet)
 
 return snippets, autosnippets
