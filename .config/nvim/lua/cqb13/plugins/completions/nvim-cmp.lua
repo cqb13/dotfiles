@@ -25,8 +25,9 @@ return {
 
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+				completeopt = "menu,menuone,preview",
 			},
+			preselect = cmp.PreselectMode.None,
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -43,8 +44,8 @@ return {
 				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
+				{ name = "nvim_lsp" },
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
 			}),
