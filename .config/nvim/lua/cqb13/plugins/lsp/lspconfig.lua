@@ -120,7 +120,7 @@ return {
 						pylsp = {
 							plugins = {
 								pycodestyle = {
-									ignore = { "W391" },
+									ignore = { "W391", "W292" },
 									maxLineLength = 180,
 								},
 							},
