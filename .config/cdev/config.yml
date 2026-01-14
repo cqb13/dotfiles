@@ -1,0 +1,7 @@
+c:
+  - ".clang-format"
+  - ".editorconfig"
+  - "Makefile"
+  - "src/main.c"
+py:
+  - "main.py"
