@@ -44,6 +44,7 @@ return {
 				"stylua",
 				"isort",
 				"black",
+                "clang-format",
 			},
 		})
 	end,

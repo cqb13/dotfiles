@@ -13,23 +13,20 @@ OBJ_DIR = $(BUILD_DIR)/obj
 CC = clang
 CFLAGS = -Wall -O0 -g
 
-# Find all .c files in src and create a list of .o files in the obj directory
 SRCS = $(shell find $(SRC_DIR) -name "*.c")
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
-# Rule to compile .c files into .o files, maintaining the directory structure
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(dir $@)  # Ensure the corresponding obj directory exists
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Rule to build the main executable by linking all object files
 .PHONY: build-main
 build-main: build-dir $(OBJS)
 	$(CC) $(CFLAGS) -o $(BUILD_DIR)/main $(OBJS)
 
 .PHONY: build-dir
 build-dir:
-	@mkdir -p $(BUILD_DIR)  # Ensure the build directory exists
+	@mkdir -p $(BUILD_DIR)
 
 .PHONY: check
 check:
