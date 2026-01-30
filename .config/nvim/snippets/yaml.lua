@@ -12,6 +12,7 @@ IndentWidth: 4
 TabWidth: 4
 UseTab: Never
 ColumnLimit: 120
+AllowShortFunctionsOnASingleLine: None
   ]],
 	{}
 )
