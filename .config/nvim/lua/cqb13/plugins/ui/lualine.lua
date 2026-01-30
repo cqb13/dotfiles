@@ -49,6 +49,21 @@ return {
 			},
 		}
 
+        local function searchcount()
+          if vim.v.hlsearch ~= 1 then
+            return ""
+          end
+
+          local sinfo = vim.fn.searchcount({ maxcount = 0 })
+          if sinfo.incomplete > 0 then
+            return "[?/?]"
+          end
+          if sinfo.total > 0 then
+            return string.format("[%d/%d]", sinfo.current, sinfo.total)
+          end
+          return ""
+        end
+
 		lualine.setup({
 			options = {
 				theme = my_lualine_theme,
@@ -60,6 +75,7 @@ return {
 						cond = lazy_status.has_updates,
 						color = { fg = "#ff9e64" },
 					},
+                    { searchcount },
 					{ "encoding" },
 					{ "fileformat" },
 					{ "filetype" },
