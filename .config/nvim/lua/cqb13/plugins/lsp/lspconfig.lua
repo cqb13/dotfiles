@@ -127,25 +127,8 @@ return {
 						},
 					},
 				})
-			end,
-            ["jdtls"] = function()
-                local root_dir = require("jdtls.setup").find_root({ ".git", "build.gradle" })
-
-                lspconfig.jdtls.setup({
-                    capabilities = capabilities,
-                    cmd = { "jdtls" },
-                    root_dir = root_dir,
-                    settings = {
-                        java = {
-                            inlayHints = { parameterNames = { enabled = "all" } },
-                        },
-                    },
-                    init_options = {
-                        bundles = {},
-                    },
-                })
-            end,
-		})
+			end
+        })
 
 		vim.diagnostic.config({
 			float = {

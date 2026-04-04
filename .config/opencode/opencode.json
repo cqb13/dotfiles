@@ -1,0 +1,28 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "bash": {
+      "*": "ask",
+      "read *": "allow",
+      "write *": "allow",
+      "ls *": "allow",
+      "grep *": "allow",
+      "cat *": "allow",
+
+      "go *": "allow",
+      "npm *": "allow",
+
+      "go get *": "ask",
+      "go install *": "ask",
+
+      "npm install *": "ask",
+      "npm i *": "ask",
+      "npm add *": "ask"
+    },
+
+    "edit": {
+      "*": "deny",
+      "packages/web/src/content/docs/*.mdx": "allow"
+    }
+  }
+}

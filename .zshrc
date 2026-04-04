@@ -57,3 +57,6 @@ alias neofetch='fastfetch'
 # Shell integrations
 eval "$(fzf --zsh)"
 
+
+# opencode
+export PATH=/Users/cqb13/.opencode/bin:$PATH
