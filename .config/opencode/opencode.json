@@ -8,6 +8,8 @@
       "ls *": "allow",
       "grep *": "allow",
       "cat *": "allow",
+      "head *": "allow",
+      "sed *": "allow",
 
       "go *": "allow",
       "npm *": "allow",
