@@ -21,10 +21,8 @@
       "npm i *": "ask",
       "npm add *": "ask"
     },
-
     "edit": {
-      "*": "deny",
-      "packages/web/src/content/docs/*.mdx": "allow"
+      "*": "allow"
     }
   }
 }
