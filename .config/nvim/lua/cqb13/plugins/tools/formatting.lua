@@ -13,7 +13,7 @@ return {
 	conform.setup({
 		formatters = {
 			stylua = {
-				args = { "--respect-editorconfig", "-" },
+				args = { "--respect-ignores", "-" },
 			},
 		},
 		formatters_by_ft = {

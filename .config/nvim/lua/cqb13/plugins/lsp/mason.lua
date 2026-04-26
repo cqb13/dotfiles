@@ -30,7 +30,6 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"pylsp",
-				"jdtls",
 				"gopls",
 				"clangd",
 				"emmet_language_server",
@@ -44,7 +43,7 @@ return {
 				"stylua",
 				"isort",
 				"black",
-                "clang-format",
+				"clang-format",
 			},
 		})
 	end,
