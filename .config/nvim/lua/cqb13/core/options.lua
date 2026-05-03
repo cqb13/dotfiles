@@ -39,6 +39,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.spelllang = "en_us"
 opt.spell = true
 
+opt.fillchars:append({ eob = " " }) -- remove the '~' characters after the end of buffers
+
 -- local autocmd = vim.api.nvim_create_autocmd
 -- local augroup = vim.api.nvim_create_augroup
 --
